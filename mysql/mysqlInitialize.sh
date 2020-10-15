@@ -6,6 +6,8 @@ oldSqlPwd3="${oldSqlPwd2:15:100}";
 oldSqlPwd=`echo $oldSqlPwd3 | awk '{sub(/^ */, "")}1'`;
 #³õÊ¼»¯µÄÃÜÂë
 echo $oldSqlPwd > onePwd.txt;
+else
+  sleep 1;
 fi
 
 /etc/init.d/mysqld start
